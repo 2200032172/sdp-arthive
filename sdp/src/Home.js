@@ -48,7 +48,7 @@ const Home = () => {
         <a href="/contact" className="navbar-link">Contact</a>
       </div>
         <div className='s'>
-          <h2>  Sign-In here to Enter the Hive </h2>
+          <h2>  Sign-In to dive into Hive </h2>
         </div>
        <div className='signup'>
         <form onSubmit={handleSubmit}>

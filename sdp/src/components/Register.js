@@ -47,12 +47,34 @@ const Register = () => {
         <a href="/contact" className="navbar-link">Contact</a>
       </div>
         <div className='s'>
-          <h2>  Sign-In here to Enter the Hive </h2>
+          <h2> Register here to dive into Hive </h2>
         </div>
        <div className='signup'>
         <form onSubmit={handleSubmit}>
          
           <br />
+          <label>
+            Username:
+            <br />
+            <input
+              type="text"
+              name="username"
+              placeholder="Enter your name"
+              value={formData.username}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Phone Number:
+            <br />
+            <input
+              type="text"
+              name="phone"
+              placeholder="Enter your Phonenumber"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+          </label>
 
           <label>
             Email:
