@@ -1,0 +1,29 @@
+.register {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .Register {
+    background-color: #cd6ea5; /* Replace with the desired background color */
+  }
+  

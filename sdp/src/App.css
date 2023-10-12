@@ -1,0 +1,121 @@
+
+.class {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+.logo{
+  position: absolute;
+  right: 60%;
+  top: 15%;
+}
+.left-side {
+  flex: 1;
+ 
+  background-color: #fbacac; /* Change to your desired color */
+  transform-origin: bottom left;
+}
+
+.right-side {
+  flex: 1;
+  background-color: #ffffff; /* Change to your desired color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+p {
+  font-size: 18px;
+}
+h2 {
+  text-align: center;
+  color: #333;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.signup{
+  width: 300px;
+ 
+  padding: 50px;
+  margin: 20px;
+}
+.s{
+  position: absolute;
+  top: 15%;
+  left: 62%;
+  size: 100px;
+}
+/* Add these styles to your CSS file */
+
+.top-right-links {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+
+.navbar-link {
+  color: black;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.navbar-separator {
+  border-right: 1px solid black;
+  margin: 0 5px;
+  height: 12px; /* Adjust the height as needed */
+}
+.button-link {
+  display: inline-block;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #007bff; /* Background color of the button */
+  color: white; /* Text color */
+  text-decoration: none;
+  border: none;
+  border-radius: 4px; /* Add rounded corners if desired */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+
+  /* Additional styling for when the button is hovered */
+  &:hover {
+    background-color: #0056b3; /* Change the color on hover to your desired highlight color */
+  }
+}
