@@ -1,29 +1,74 @@
-.register {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  .Register {
-    background-color: #cd6ea5; /* Replace with the desired background color */
-  }
-  
+.page-background {
+  background-color: #f0f0f0;
+  min-height: 100vh;
+}
+
+.vertical-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  height: 100%; /* Make the container take up the full height of the page */
+}
+.s{
+  position: absolute;
+  top: 20px;
+}
+.left-side {
+  flex: 1;
+ 
+  background-color: #eda9a9; /* Change to your desired color */
+  transform-origin: bottom left;
+  min-height: 100vh;
+}
+
+.right-side {
+  /* CSS for the right side content */
+  flex: 1;
+  background-color: #f1ebeb; /* Change to your desired color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Additional CSS rules for other elements as needed */
+.registration-form-container {
+  width: 100px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #1a1818;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+button:hover {
+  background-color: #e88ca5; /* Change the background color on hover */
+}
+.change-background {
+  background-color: #e39a9a; /* Replace with your desired color */
+}

@@ -1,65 +1,92 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
+/* FrontPage.css */
 
+/* Navbar Styles */
 .navbar {
   background-color: #333;
-  color: white;
+  color: #ffff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px 30px; /* Adjust padding as needed */
-}
-
-.logo {
-  display: flex;
   align-items: center;
+  padding: 5px 10px;
 }
 
 .nav-links {
-  display: flex;
-  gap: 20px;
   list-style: none;
-  margin-left: auto; /* Move components to the right */
+  padding: 0;
+  display: flex;
 }
 
 .nav-links li {
+  margin: 0 10px;
   cursor: pointer;
 }
 
-/* Add these styles to adjust the logo size and position */
+/* Logo Styles */
 .logo-image {
-  width: 100px; /* Adjust the width as needed */
-  height: auto;
-  margin-right: 20px; /* Adjust the margin as needed */
+  width: 100px;
 }
 
-.hero {
-  background: url('image.jpg') no-repeat center center/cover;
-  color: #fff;
+/* Hero Section Styles */
+.hero-container {
+  background-color: #eda9a9;
   text-align: center;
-  padding: 100px 20px;
+  padding: 0; /* Remove padding to make it full screen */
+  position: relative; /* Add this to make positioning of hero text relative to hero-container */
 }
 
+.hero-image {
+  width: 100%;
+  height: 70vh; /* Set the height to take up the full viewport height */
+  object-fit: cover; /* Ensure the image covers the entire space */
+}
+
+.hero-text {
+  position: absolute;
+  top: 20%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+  color: #fff; /* Set text color */
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 1rem;
+}
+
+/* Card Styles */
 .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
   padding: 20px;
 }
 
 .card {
-  background-color: #f4f4f4;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
   text-align: center;
-  width: 200px;
-  height: 300px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-.frontpage {
-  background-color: #cd6ea5; /* Replace with the desired background color */
+
+.card img {
+  width: 100%;
+  max-height: 170px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
+
+.card h3 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.card p {
+  font-size: 0.8rem;
+}
+
