@@ -1,0 +1,60 @@
+/* Style for the horizontal card container */
+.horizontal-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+    gap: 20px; /* Adjust the gap as needed */
+  }
+  
+  /* Style for individual horizontal cards */
+  .horizontal-card {
+    display: flex;
+    flex-direction: column; /* Stack image and description vertically */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for images inside horizontal cards */
+  .horizontal-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style for description within horizontal cards */
+  .horizontal-card .description {
+    flex-grow: 1; /* Expand to fill available vertical space */
+    padding: 10px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis (...) if text overflows */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-size: 14px; /* Increase font size as needed */
+  }
+  
+  /* Navbar styles */
+  .navbarr {
+    background-color: #5c5353; /* Change this to your desired background color */
+    color: rgb(239, 241, 235); /* Change this to your desired text color */
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  /* Logo styles */
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Logo image styles */
+  .logo img {
+    max-height: 40px; /* Change this to your desired image height */
+    margin-right: 10px; /* Adjust as needed */
+  }
+  
+  /* Logo text styles */
+  .art-hive {
+    font-size: 65px; /* Change this to your desired font size */
+  }
+  

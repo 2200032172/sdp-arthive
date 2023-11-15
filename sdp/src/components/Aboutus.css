@@ -1,0 +1,29 @@
+/* AboutUs.css */
+
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    color: rgb(212, 23, 76);
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+ul.team-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+a {
+    color: rgb(245, 239, 244);
+    text-decoration: none; /* Removed the invisible character */
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './FrontPage.css';
 import logo from './logo.png';
 import image from './image.jpg';
@@ -11,6 +12,7 @@ import pic6 from './pic6.jpg';
 
 
 const FrontPage = () => {
+    
     // Array of sample data for the cards
     const cardData = [
         {
@@ -70,15 +72,24 @@ const FrontPage = () => {
                 <div className="left-section">
                     <ul className="nav-links">
                         <li>Home</li>
-                        <li>ArtStore</li>
-                        <li>ArtMagazine</li>
+                        <li>
+                        <Link to="/ArtStore"> Art Store</Link>
+                        </li>
+                        <li>
+                        <Link to="/Artmagazine"> Art Magazine</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="center-section">
                     <img src={logo} alt="Logo" className="logo-image" />
                 </div>
                 <ul className="nav-links">
-                    <li>About Us</li>
+                <li>
+                  <Link to="/Aboutus">About Us</Link>
+                 </li>
+                 <li>
+                  <Link to="/Logout">Log Out</Link>
+                 </li>
                 </ul>
             </nav>
 

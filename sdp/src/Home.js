@@ -1,40 +1,51 @@
-//Home.js
 import React, { useState } from 'react';
-import './App.css'; // You can create this CSS file to style your page
+import './App.css';
 import img from './img.png';
 import { Link, useNavigate } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
 
 const Home = () => {
-  const history = useNavigate();
+  const navigate = useNavigate();
 
-  const[email,setEmail] = useState('');
-  const[password,setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleSubmit = async(e) =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    let result = await fetch(
-      `http://localhost:5000/login`, {
-        method: "post",
+
+    try {
+      const result = await fetch(
+        'http://localhost:5000/login', {
+        method: "POST",
         body: JSON.stringify({
           email, password
         }),
         headers: {
-          'Content-Type' : 'application/json'
+          'Content-Type': 'application/json'
         }
       }
-    )
+      );
+      if (result.ok) {
+        localStorage.setItem('email',email);
 
-    result = await result.json();
-    console.warn(result);
-    if(result){
-      setEmail("");
-      setPassword("");
+        navigate('/frontpage');
+      } else if (result.status === 400) {
+        // User already exists, show an alert
+        alert('Incorrect Credentials');
+      } else if (result.status === 401) {
+        alert('Invalid email, please register !!');
+      } else {
+        alert('Login failed');
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      alert('Login failed');
     }
+    setEmail("");
+    setPassword("");
   }
 
   const [showPassword, setShowPassword] = useState(false);
-  
+
   return (
     <div className="class">
       <div className="left-side">
@@ -42,20 +53,18 @@ const Home = () => {
       </div>
       <div className="right-side">
         <div className="top-right-links">
-          <a href="/about" className="navbar-link">About Us</a>
+          <Link to="/about" className="navbar-link">About Us</Link>
           <span className="navbar-separator"></span>
-          <a href="/faqs" className="navbar-link">FAQs</a>
+          <Link to="/faqs" className="navbar-link">FAQs</Link>
           <span className="navbar-separator"></span>
-          <a href="/contact" className="navbar-link">Contact</a>
+          <Link to="/contact" className="navbar-link">Contact</Link>
         </div>
         <div className='s'>
-          <h2>  Sign-In to dive into Hive </h2>
+          <h2>Sign-In to dive into Hive</h2>
         </div>
         <div className='signin'>
-          <form action="POST" onSubmit={handleSubmit}>
-
+          <form onSubmit={handleSubmit}>
             <br />
-
             <label>
               Email:
               <br />
@@ -63,11 +72,11 @@ const Home = () => {
                 type="email"
                 name="email"
                 placeholder="Enter your email"
-                onChange={(e) => {setEmail(e.target.value)}}
+                required
+                value={email} // Use value instead of onChange
+                onChange={(e) => { setEmail(e.target.value) }}
               />
             </label>
-
-
             <label>
               <span>Password:</span>
               <br />
@@ -75,28 +84,28 @@ const Home = () => {
                 type={showPassword ? 'text' : 'password'}
                 name="password"
                 placeholder="Enter your password"
-                onChange={(e) => {setPassword(e.target.value)}}
+                required
+                value={password} // Use value instead of onChange
+                onChange={(e) => { setPassword(e.target.value) }}
               />
               <span
-                style={{ cursor: 'pointer', marginLeft: '-15%' }}
+                style={{ cursor: 'pointer', marginLeft: '25%' }}
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? '🔓' : '🔒'}
               </span>
             </label>
-            <a href="/forgotpassowrd">Forgot Password?</a>
+            <Link to="/forgotpassword">Forgot Password?</Link> {/* Use Link for navigation */}
             <br />
-            <Link to="/frontpage" className='button-link'>
-        Submit
-      </Link>
-
+            <button type="submit" className="register-button">
+              Login
+            </button>
           </form>
           <br />
-          <p3>
-            New here? <a href="/register">Register now</a>
-          </p3>
+          <p>
+            New here? <Link to="/register">Register now</Link> {/* Use Link for navigation */}
+          </p>
         </div>
-
       </div>
     </div>
   );
