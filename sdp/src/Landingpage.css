@@ -1,53 +1,51 @@
-/* App.css */
+/* Styling for the homepage container */
+.homepage {
+  background-image: url('background.jpg'); /* Replace 'background.jpg' with your image file */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
 
-.landing-page {
-    font-family: Arial, sans-serif;
-  }
-  
-  .navbar {
-    background-color: #333;
-    color: white;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-image {
-    width: 50px;
-    height: auto;
-  }
-  
-  .content {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .main-image {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin: 20px 0;
-  }
-  
-  .join-button {
-    background-color: #0074d9;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
+/* Styling for the navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  width: 100%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styling for the navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Styling for the content section */
+.content {
+  text-align: center;
+  margin: 100px;
+}

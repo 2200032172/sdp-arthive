@@ -39,6 +39,10 @@ h2 {
   text-align: center;
   color: #333;
 }
+s{
+  position: absolute;
+  top: 20px;
+}
 form {
   display: flex;
   flex-direction: column;

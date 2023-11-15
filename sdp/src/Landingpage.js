@@ -1,26 +1,27 @@
 import React from 'react';
-import './Landingpage.css'; // Import your CSS file
+import React, { useState } from 'react';
+import './Landingpage.css'; // Import the CSS file
 import img from './img.png';
 
-function App() {
-  return (
-    <div className="landing-page">
-      <header className="navbar">
-        <div className="logo">
+const Landingpage = () => {
+    return (
+        <div className="Landingpage">
+            <nav className="navbar">
+                <div className="logo">Your Logo</div>
+                <div className="left-side">
         <img src={img} alt="Logo" className="logo" />
+      </div>
+                <ul className="nav-links">
+                    <li><a href="#">Signup</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </nav>
+            <div className="content">
+                <h1>Welcome to our Arts World</h1>
+                <p>Explore the beauty of art and creativity on our platform.</p>
+            </div>
         </div>
-      </header>
+    );
+};
 
-      <main className="content">
-        <img src="main-image.jpg" alt="Main Image" className="main-image" />
-        <button className="join-button">Join the Network</button>
-      </main>
-
-      <footer className="footer">
-        <p>&copy; 2023 Your Company Name</p>
-      </footer>
-    </div>
-  );
-}
-
-export default App;
+export default Landingpage;

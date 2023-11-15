@@ -78,7 +78,7 @@ const Home = () => {
                 onChange={(e) => {setPassword(e.target.value)}}
               />
               <span
-                style={{ cursor: 'pointer', marginLeft: '25%' }}
+                style={{ cursor: 'pointer', marginLeft: '-15%' }}
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? '🔓' : '🔒'}

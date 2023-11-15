@@ -69,17 +69,16 @@ const FrontPage = () => {
             <nav className="navbar">
                 <div className="left-section">
                     <ul className="nav-links">
-                        <li>ArtGallery</li>
+                        <li>Home</li>
                         <li>ArtStore</li>
+                        <li>ArtMagazine</li>
                     </ul>
                 </div>
                 <div className="center-section">
                     <img src={logo} alt="Logo" className="logo-image" />
                 </div>
                 <ul className="nav-links">
-                    <li>Home</li>
                     <li>About Us</li>
-                    <li>Contact</li>
                 </ul>
             </nav>
 
@@ -129,3 +128,4 @@ const FrontPage = () => {
 };
 
 export default FrontPage;
+
